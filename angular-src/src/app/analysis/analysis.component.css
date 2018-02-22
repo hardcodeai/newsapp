@@ -1,0 +1,41 @@
+
+#top{
+    margin-top: 1%;
+    background-image: url("https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?ixlib=rb-0.3.5&s=30ca8258bb467fdd7a76a1bd8c571ffa&auto=format&fit=crop&w=1506&q=80");
+}
+#card{
+
+    min-height: 500px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    
+}
+#card:after {
+    display: block;
+    content: " invisible node "
+    flex(999 999 auto)
+  }
+  .link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.website{
+    width: 100%;
+    background: rgb(8, 163, 163);
+}
+.newsCards{
+    max-width:800px;
+    flex: 0 0 auto;
+    margin: 9px;
+    z-index: 5;
+    background-image: url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdff4c62302fd44491d4850202323d11&auto=format&fit=crop&w=750&q=80');
+    opacity: 0.9;
+}
+#result{
+    opacity:0.5
+}

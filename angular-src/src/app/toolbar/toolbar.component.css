@@ -1,0 +1,17 @@
+.tool{
+   z-index: 5;
+   opacity:0.9;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,23 @@
+<mat-card id="top"> 
+<div id="card">
+<mat-card class="newsCards">
+        <mat-card-header>  
+          <mat-card-title></mat-card-title>
+        </mat-card-header>  
+        <mat-card-content>
+          <form>
+            <mat-input-container class="container">
+              <input type="text" matInput [(ngModel)]="query" name="find" placeholder="FIND"/>
+            </mat-input-container> 
+          </form>
+      </mat-card-content>
+        <mat-card-actions><button mat-button (click)="onSubmit()" class="website">load more</button></mat-card-actions>
+</mat-card>
+<mat-card id="result" >
+    <mat-card-header>  
+        <mat-card-title><h3>THE SENTIMENT IS:</h3></mat-card-title>
+    </mat-card-header>  
+    <mat-card-content><h1>{{output}}</h1></mat-card-content>
+</mat-card>
+</div>
+</mat-card>

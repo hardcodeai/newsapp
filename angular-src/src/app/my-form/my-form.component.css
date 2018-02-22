@@ -1,0 +1,68 @@
+.card{
+    max-width: 100%;
+    background:teal;
+    margin-top:80px;
+    opacity: 0.9;
+}
+.formwidth{
+    max-width: 100%;
+    z-index: 5;
+}
+.channel{
+    
+    padding: 25px;
+}
+.formwidth > * {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+  }
+  #bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+.newsCards{
+    max-width:200px;
+    flex: 0 0 auto;
+    margin: 9px;
+}
+#card-container{
+
+    min-height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+#card-container:after {
+    display: block;
+    content: " invisible node "
+    flex(999 999 auto)
+  }
+  .link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.website{
+    width: 100%;
+    background: seagreen;
+}
+#not-found-card{
+    max-height: 90px;
+}

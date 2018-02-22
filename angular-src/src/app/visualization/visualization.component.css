@@ -1,0 +1,13 @@
+.card-element { 
+    position: relative;
+    top: 150px; 
+    right: 0;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    background:
+   rgba(28, 152, 209, 0.74);
+    color: #fff; 
+    padding: 1rem; 
+    font-family: Avenir, Helvetica, sans-serif;
+   }

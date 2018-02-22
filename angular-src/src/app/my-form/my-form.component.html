@@ -1,0 +1,43 @@
+<mat-card class="card" *ngIf="init">
+  <form class="formwidth" (ngSubmit)="onSubmit()" *ngIf="init" exportAs="ngForm">
+        <div class="channel">  
+            <table>
+              <tr>
+                  <th><mat-checkbox (change)='onChange($event)' id="ABC News">ABC</mat-checkbox></th>  
+                  <th><mat-checkbox (change)='onChange($event)' id="BBC News">BBC</mat-checkbox> </th> 
+                  <th><mat-checkbox (change)='onChange($event)' id="BBC Sport">BBC sport</mat-checkbox></th>  
+                  <th><mat-checkbox (change)='onChange($event)' id="ESPN">ESPN</mat-checkbox></th>  
+                  <th><mat-checkbox (change)='onChange($event)' id="Business Insider">Business Insider</mat-checkbox> </th>
+                  <th><mat-checkbox (change)='onChange($event)' id="CNBC">CNBC</mat-checkbox> </th> 
+                  <th><mat-checkbox (change)='onChange($event)' id="CNN">CNN</mat-checkbox></th> 
+              </tr>
+            </table> 
+        </div>  
+         <mat-input-container class="container">
+                <input type="text" matInput placeholder="News Search" id="searchValue" [(ngModel)]="search.searchValue" name="NEWS"/>
+          </mat-input-container> 
+          <button type="submit" mat-raised-button>Submit</button>
+        
+    </form> 
+</mat-card> 
+    <div *ngIf="!init" id="card-container">
+    <mat-card *ngFor="let spaceScreen of spaceScreens" class="newsCards">
+            <mat-card-header>  
+              <mat-card-title>{{spaceScreen.topic}}</mat-card-title>
+            </mat-card-header>  
+            <img mat-card-image *ngIf="spaceScreen.imageURL" src="{{spaceScreen.imageURL}}">
+            <img mat-card-image *ngIf="!spaceScreen.imageURL" src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/sign_warning.png">
+            <mat-card-content><p>{{spaceScreen.description}}</p></mat-card-content>
+            <mat-card-actions><button mat-button class="website"><a href="{{spaceScreen.newsURL}}" class="link">load more</a></button></mat-card-actions>
+    </mat-card>
+    </div>
+    <div *ngIf="!found" id="not-found">
+            <mat-card id ="not-found-card">
+                <mat-card-title><h3>OOPS </h3></mat-card-title>
+                <mat-card-content><p>Seems like you've hit a dead end, there are no articles with the following specifications. 
+                </p>
+                </mat-card-content>
+            </mat-card>
+    
+    </div>
+
