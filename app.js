@@ -43,7 +43,7 @@ process.on('UnhandledPromiseRejectionWarning', function (err) {
 
 //cron fetching the data for the headlines--------------------------------------------------------------
 
-new CronJob('00 */2 * * * *', function() {
+new CronJob('00 00 */12 * * *', function() {
 console.log('fetching news')
 //API request---------------------------------------------------------------------------------------------
 const options = {  
